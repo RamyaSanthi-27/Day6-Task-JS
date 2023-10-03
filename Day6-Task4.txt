@@ -1,0 +1,20 @@
+Task : 4.write a class to calculate the uber price
+
+
+class CalulateUberPrice{
+  constructor(rateperKelometer, rateperMinute){
+    this.rateperKelometer=rateperKelometer;
+    this.rateperMinute=rateperMinute;
+    }
+    calculatePrice(distanceinMiles, durationinMinutes){
+      const fare1=distanceinMiles*this.rateperKelometer + durationinMinutes*this.rateperMinute;
+      return fare1;
+    }
+  }
+  
+const calculate=new CalulateUberPrice(3.5,.20);
+const distance=15;
+const duration=25;
+
+const fare=calculate.calculatePrice(distance, duration);
+console.log(`The Calculated Fare is : ${fare.toFixed(2)}`);

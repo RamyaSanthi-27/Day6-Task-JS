@@ -1,0 +1,30 @@
+
+ Task : 1.  https://github.com/rvsp/typescript-oops/blob/master/Practice/Movie.md
+
+
+class Movie {
+  constructor(title, studio, rating = "PG") {
+    this.title = title;
+    this.studio = studio;
+    this.rating = rating;
+  }
+
+getPG(movieArray) {
+    return movieArray.filter(movie => movie.rating === "PG");
+  }
+}
+var c=new Movie();
+// Sample Movie instances
+const movie1 = new Movie("Avatar", "20th Century Studios", "PG");
+const movie2 = new Movie("Casino Royale", "Eon Productions", "PG-13");
+const movie3 = new Movie("Gravity", "Warner Bros. Pictures", "R");
+const movie4 = new Movie("Interstellar", "Paramount Pictures", "PG");
+
+// Create an array of Movie instances
+var movieArray = [movie1, movie2, movie3, movie4];
+
+// Use the getPG method to filter PG-rated movies
+var pgMovies = c.getPG(movieArray);
+
+// Print the PG-rated movies
+console.log(pgMovies);

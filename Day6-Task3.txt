@@ -1,0 +1,24 @@
+Task : 3.Write a “person” class to hold all the details.
+
+class Person{
+  constructor (firstName,lastName, age,gender,email,phoneNumber){
+    this.firstName=firstName;
+    this.lastName=lastName;
+    this.age=age;
+    this.gender=gender;
+    this.email=email;
+    this.phoneNumber=phoneNumber;    
+    }
+    getfullName(){
+      return `${this.firstName}${this.lastName}`;
+      }
+      displayDetails(){
+        console.log(`Name        : ${this.getfullName()}`);
+        console.log(`Age         : ${this.age}`);
+        console.log(`Gender      : ${this.gender}`);
+        console.log(`email       : ${this.email}`);
+        console.log(`phoneNumber : ${this.phoneNumber}`);
+        }
+  }
+  var personDetails=new Person("Ramya","Santhosh",36,"Female","ramyasan@gmail.com","123-468-7923");
+  personDetails.displayDetails();

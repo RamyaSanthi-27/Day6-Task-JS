@@ -1,0 +1,62 @@
+Task : 2.https://github.com/rvsp/typescript-oops/blob/master/Practice/class-circle.md
+
+
+class Circle{
+constructor(radius=1.0,color="red"){
+  this.radius=radius;
+  this.color=color;
+}
+getRadius(){
+  return `${this.radius}`;
+}
+set changeRadius(modifiedRadius){
+  this.radius=modifiedRadius;
+  }
+getColor(){
+  return `${this.color}`;
+  }
+set changeColor(modifiedColor){
+  this.color=modifiedColor;
+  }
+toString(){
+  return `Circle[radius=${this.radius},color=${this.color}]`;
+  }
+
+
+getArea(){
+  var cArea=Math.PI*this.radius*this.radius;
+//var onlytowdeci=toFixed.cArea;
+  return `The Area of Circle is : ${cArea.toFixed(2)}`;
+}
+ 
+getCircumference(){
+  var cCircumference=2*Math.PI*this.radius;
+  //console.log(cCircumference);
+  return `The Circumference of the Circle is : ${cCircumference.toFixed(2)}`;
+}
+}
+var defaultCircle= new Circle();
+
+var customRadius=new Circle();
+console.log(customRadius.radius);
+
+var cusRadiusColor=new Circle();
+console.log(cusRadiusColor.radius , cusRadiusColor.color);
+
+console.log(customRadius.getRadius());
+customRadius.changeRadius="2.5";
+console.log(customRadius.radius);
+
+console.log(cusRadiusColor.getColor());
+cusRadiusColor.changeColor="blue";
+console.log(cusRadiusColor.color);
+
+var ChangeString=new Circle(4.3, "Green");
+console.log(ChangeString.toString());
+
+var circleArea=new Circle();
+console.log(circleArea.getArea());
+
+var circleCircum=new Circle();
+console.log(circleCircum.getCircumference());
+
